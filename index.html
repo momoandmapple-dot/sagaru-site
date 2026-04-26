@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagaru 소개</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(270deg, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% {background-position: 0%;}
+      50% {background-position: 100%;}
+      100% {background-position: 0%;}
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.9;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: block;
+      width: 250px;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.3);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: rgba(0,0,0,0.6);
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sagaru의 관한 설명</h1>
+    <p>이 페이지는 Sagaru에 대한 소개 페이지입니다.</p>
+
+    <div class="buttons">
+      <a href="https://www.youtube.com/@Sa%EA%B0%80%EB%A3%A8" class="btn" target="_blank">유튜브</a>
+      <div class="btn" onclick="copyServer()">서버 접속</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Sagaru
+  </footer>
+
+  <script>
+    function copyServer() {
+      const text = "roin.mcv.kr";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("roin.mcv.kr이 복사되었습니다! Ctrl + V로 붙여넣기 해보세요.");
+      });
+    }
+  </script>
+</body>
+</html>
